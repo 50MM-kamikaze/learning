@@ -13,7 +13,7 @@ from typing import Any
 class Point:
     def __str__(self):
         return f"({self.x} , {self.y})"
-    def default_colour(self):
+    def default_color(self):
         print("red")
     def __init__(self , x , y):
         self.x = x 
@@ -37,10 +37,10 @@ print(point.x)
 point.draw()
 another = Point(3,4) #completely different than the first
 another.draw()
-another.default_colour()
-Point.default_colour ="yellow"
-print(another.default_colour)
-print(point.default_colour) #changes in both cases 
+another.default_color()
+Point.default_color ="yellow"
+print(another.default_color)
+print(point.default_color) #changes in both cases 
 #if we wanna call a class method , in a different way 
 point2 = Point.zero() #just a different way to express like i said 
 print(point2)
@@ -59,7 +59,7 @@ combined = pointer + other
 print(combined.x)
 ###########################################################################################################################
 #custom containers 
-class TagCloud: # this clss gives access to the underlying dictionary , which is not a good thing , uncomment line 84
+class TagCloud: # this class gives access to the underlying dictionary , which is not a good thing , uncomment line 84
     def __init__(self):
         self.tags = {}
     def add (self , tag):
@@ -96,14 +96,14 @@ class TagCloud2: # we can make the class private by replacing tags2 with __tags2
     def __iter__(self):
         return iter(self.__tags2) #this function returns self.tags over a for loop 
 cloud2 = TagCloud2()
-#print(cloud2.__tags2) # gives an arrtribute error, uncomment to find out  
+#print(cloud2.__tags2) # gives an attribute error, uncomment to find out  
 print(cloud2.__dict__)#look at the console 
-print(cloud2._TagCloud2__tags2) #using this you can access them, private things are used to reduce accedental usage
+print(cloud2._TagCloud2__tags2) #using this you can access them, private things are used to reduce accidental usage
 #___________________________________________________________________________________________________________________________________________________________________________
 class Product:
     def __init__(self , price):
         self.__price = price 
-# the above class wil even take a negatice price , so, 
+# the above class wil even take a negative price , so, 
 class Product2:
     def __init__(self , price):
         self.set_price(price)
@@ -113,9 +113,9 @@ class Product2:
         if value < 0:
             raise ValueError("Price cannot be negative")
         self.__price = value 
-# this above class will not take a negatve value for price 
+# this above class will not take a negative value for price 
 product = Product(-50)
-#product2 = Product2(-50) #this gives an error , for simplar code
+#product2 = Product2(-50) #this gives an error , for simple code
 class Product3:
     def __init__(self , price):
         self.set_price(price)
@@ -130,4 +130,4 @@ class Product3:
 product3 = Product3(10)
 #product3.price = -10 # will give an error 
 product3.price = 10 
-print(product3.price) #to minimise the way code looks. when . is used you will still see the previous methods , to eleminate them we will use 
+print(product3.price) #to shorten the way code looks. when . is used you will still see the previous methods , to eliminate them we will use 
