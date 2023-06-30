@@ -1,8 +1,8 @@
-#obejetc.methods()
+#object.methods()
 #isinstance --> to know if Point is the instance of point 
-#constructor def __init__ is the name of the function  (its a majic method called a constructor )
-#self :- refrence to the current point object
-#magic meths have teo underscores infront and back 
+#constructor def __init__ is the name of the function  (its a magic method called a constructor )
+#self :- reference to the current point object
+#magic meths have teo underscores in front and back 
 
 
 
@@ -35,13 +35,13 @@ print(type(point))
 print(isinstance(point , Point))
 print(point.x)
 point.draw()
-another = Point(3,4) #completly different than the first
+another = Point(3,4) #completely different than the first
 another.draw()
 another.default_colour()
 Point.default_colour ="yellow"
 print(another.default_colour)
 print(point.default_colour) #changes in both cases 
-#if we wannna call a class method , in a different way 
+#if we wanna call a class method , in a different way 
 point2 = Point.zero() #just a different way to express like i said 
 print(point2)
 point2.draw()
@@ -51,7 +51,7 @@ print(str(point3) , point3)
 pointer = Point(1,2)
 other = Point(1,2)
 other2 = Point(10, 10)
-print(pointer == other) #gives false , in memory we are addresses in obejcts in memory, now it gives true cause of the __eq__
+print(pointer == other) #gives false , in memory we are addresses in objects in memory, now it gives true cause of the __eq__
 print(pointer > other2)
 print(pointer < other2)
 print (pointer + other)
