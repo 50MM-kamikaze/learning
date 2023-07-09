@@ -1,2 +1,2 @@
 # learning
-well just made for reference perposes no big deal 
+well just made for reference purpose no big deal 
